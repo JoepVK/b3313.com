@@ -1,92 +1,207 @@
-.fullscreen-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;  background-color: black;
-}
-
-.fullscreen-bg__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    height: 300%;
-    top: -100%;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    width: 300%;
-    left: -100%;
-  }
-}
-
-@media (max-width: 767px) {
-  .fullscreen-bg {
-    background: url('../img/videoframe.jpg') center center / cover no-repeat;
-  }
-
-  .fullscreen-bg__video {
-    display: none;
-  }
-}
-
-#logo{
-	display: block;
-    margin-top: 10%;
-	margin-bottom: auto;
-	margin-left: auto;
-	margin-right: auto;
-    width: 25%;
-    padding: 10px;
-	}
-	
-#imagesMain{
-	vertical-align: middle;
-	padding: 0;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 20px;
-    text-align:center;	
-	}
-
-#imagesMain img{
-    vertical-align: center;    margin-top: 50px;    width: 10%;    margin-left:5%;    margin-right:5%;
-}
-
-.unmute{
-	background-image: url(content/unmute.png);
-	background-size: cover;
-	width:35px;
-	height:30px;
-	cursor: pointer;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-}
-
-.mute{
-	background-image: url(content/mute.png);
-	position: fixed;
-	bottom: 0;
-	left: 0;
-}
-
-h1{
-color:white;
-	text-shadow:
-	-1px -1px 0 #000,
-	1px -1px 0 #000,
-	-1px 1px 0 #000,
-	1px 1px 0 #000;
-font-family: sans-serif;
+.fullscreen-bg {
+
+  position: fixed;
+
+  top: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  left: 0;
+
+  overflow: hidden;
+
+  z-index: -100;
+  background-color: black;
+
+}
+
+
+
+.fullscreen-bg__video {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+
+@media (min-aspect-ratio: 16/9) {
+
+  .fullscreen-bg__video {
+
+    height: 300%;
+
+    top: -100%;
+
+  }
+
+}
+
+
+
+@media (max-aspect-ratio: 16/9) {
+
+  .fullscreen-bg__video {
+
+    width: 300%;
+
+    left: -100%;
+
+  }
+
+}
+
+
+
+@media (max-width: 767px) {
+
+  .fullscreen-bg {
+
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+
+  }
+
+
+
+  .fullscreen-bg__video {
+
+    display: none;
+
+  }
+	
+#logo{
+	display: block;
+
+    margin-top: 10%;
+
+	margin-bottom: auto;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+    width: 50%;
+
+    padding: 10px;
+
+	}
+
+}
+
+
+
+#logo{
+
+	display: block;
+
+    margin-top: 10%;
+
+	margin-bottom: auto;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+    width: 25%;
+
+    padding: 10px;
+
+	}
+
+	
+
+#imagesMain{
+
+	vertical-align: middle;
+
+	padding: 0;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    margin-top: 20px;
+
+    text-align:center;
+	
+
+	}
+
+
+
+#imagesMain img{
+
+    vertical-align: center;
+    margin-top: 50px;
+    width: 10%;
+    margin-left:5%;
+    margin-right:5%;
+
+}
+
+
+
+.unmute{
+
+	background-image: url(content/unmute.png);
+
+	background-size: cover;
+
+	width:35px;
+
+	height:30px;
+
+	cursor: pointer;
+
+	position: fixed;
+
+	bottom: 0;
+
+	left: 0;
+
+}
+
+
+
+.mute{
+
+	background-image: url(content/mute.png);
+
+	position: fixed;
+
+	bottom: 0;
+
+	left: 0;
+
+}
+
+
+
+h1{
+
+color:white;
+
+	text-shadow:
+
+	-1px -1px 0 #000,
+
+	1px -1px 0 #000,
+
+	-1px 1px 0 #000,
+
+	1px 1px 0 #000;
+
+font-family: sans-serif;
+
+
 }
