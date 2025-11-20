@@ -4,7 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<img id="logo" src="content/logo.webp" alt="">
+<img id="logo" src="content/logo.png" alt="">
 <div id="imagesMain">
 <a href="https://romhacking.com/hack/b3313-unabandoned"><img id="buttons" src="content/button_download.png" alt=""></a> 
 <a href="https://discord.gg/sGMDjygyxX"><img id="buttons" src="content/button_discord.png" alt=""></a>
@@ -14,34 +14,33 @@
         <source src="content/background.webm" type="video/webm">
     </video>
 </div>
-<audio id="track" loop autoplay>
+<audio id="track" loop autoplay muted>
   <source src="content/bgm.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
-</audio> 
-<div class="unmute" onclick="toggleAudio()"></div>
+</audio>
+
+<div class="unmute" id="toggleSound"></div>
 
 <script>
-function toggleAudio() {
-    const track = document.getElementById('track');
+// Ensure audio plays on iOS & other strict browsers
+document.addEventListener('DOMContentLoaded', function () {
+  const audio = document.getElementById('track');
+  const toggle = document.getElementById('toggleSound');
 
-    // Try to play first
-    track.play().then(() => {
-        // Once playback is confirmed, toggle mute
-        track.muted = !track.muted;
-        $('.unmute').toggleClass('mute');
-    }).catch(err => {
-        console.log("Autoplay blocked until user interacts:", err);
+  // Try to play immediately (may stay muted)
+  audio.play().catch(() => {
+    // If autoplay fails, wait for user interaction
+    document.body.addEventListener('click', initAudio, { once: true });
+  });
 
-        // If playback was stopped, try again
-        track.play().then(() => {
-            track.muted = !track.muted;
-            $('.unmute').toggleClass('mute');
-        });
-    });
-}
+  function initAudio() {
+    audio.play();
+  }
+
+  toggle.addEventListener('click', function () {
+    audio.muted = !audio.muted;
+    toggle.classList.toggle('mute', audio.muted);
+  });
+});
 </script>
 </html>
-
-
-
-
